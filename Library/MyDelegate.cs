@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Library
+﻿namespace Library
 {
     /// <summary>
     /// 参数类型为object的委托类型

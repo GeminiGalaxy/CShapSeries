@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Library
+﻿namespace Library
 {
     /// <summary>
     /// 泛型委托
