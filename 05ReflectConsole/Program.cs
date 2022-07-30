@@ -33,17 +33,19 @@ namespace ReflectConsole
 
             //创建私有构造实例
             Type? privateType = assembly.GetType("Library.PrivateMyReflect");
+            object? objPrivate = null;
             if (privateType != null)
             {
-                object? objPrivate = Activator.CreateInstance(privateType, true);
+                objPrivate = Activator.CreateInstance(privateType, true);
             }
 
             //创建泛型实例
             Type? genericType = assembly.GetType("Library.MyReflect`1");//获取泛型类型
             genericType = genericType?.MakeGenericType(typeof(string));//设置类型参数
+            object? objGenericType = null;
             if (genericType != null)
             {
-                object? objGenericType = Activator.CreateInstance(genericType);
+                objGenericType = Activator.CreateInstance(genericType);
             }
             #endregion
 
@@ -83,12 +85,12 @@ namespace ReflectConsole
 
             #region 获取泛型信息
             //获取无参泛型方法
-            MethodInfo? genericMethodInfo = genericType.GetMethod("GenericsFunction", 1, Type.EmptyTypes);
+            MethodInfo? genericMethodInfo = genericType?.GetMethod("GenericsFunction", 1, Type.EmptyTypes);
 
             //获取泛型参数方法
             Type genericTypePara = Type.MakeGenericMethodParameter(0);//创建泛型参数
             paraTypes = new Type[] { genericTypePara };//设置方法参数类型
-            genericMethodInfo = genericType.GetMethod("GenericsFunction", 2, paraTypes);
+            genericMethodInfo = genericType?.GetMethod("GenericsFunction", 2, paraTypes);
             #endregion
 
             #region 获取包含in/out/ref关键字参数方法
@@ -127,11 +129,14 @@ namespace ReflectConsole
             //获取泛型方法
             genericTypePara = Type.MakeGenericMethodParameter(0);
             paraTypes = new Type[] { genericTypePara };
-            genericMethodInfo = genericType.GetMethod("GenericsFunction", 2, paraTypes);
+            genericMethodInfo = genericType?.GetMethod("GenericsFunction", 2, paraTypes);
 
             objectParas = new object[] { 666 };//创建参数值
             genericMethodInfo = genericMethodInfo?.MakeGenericMethod(typeof(int), typeof(string));//设置泛型参数类型
-            result = genericMethodInfo?.Invoke(objGenericType, objectParas);//调用泛型方法
+            if (objGenericType != null)
+            {
+                result = genericMethodInfo?.Invoke(objGenericType, objectParas);//调用泛型方法
+            }
             #endregion
 
             #region 调用包含in/out/ref关键字参数方法
