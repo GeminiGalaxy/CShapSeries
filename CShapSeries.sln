@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{1B084505-8BCB-47FC-90B8-8C9F46C72E37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.csproj", "{1B084505-8BCB-47FC-90B8-8C9F46C72E37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DelegateConsole", "01DelegateConsole\01DelegateConsole.csproj", "{E1AA2ABE-3DDC-49CD-BD6D-C06F16438040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01DelegateConsole", "01DelegateConsole\01DelegateConsole.csproj", "{E1AA2ABE-3DDC-49CD-BD6D-C06F16438040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02EventConsole", "02EventConsole\02EventConsole.csproj", "{2C180796-715B-4D4B-8D32-FFA50FD9E376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02EventConsole", "02EventConsole\02EventConsole.csproj", "{2C180796-715B-4D4B-8D32-FFA50FD9E376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03GenericsConsole", "03GenericsConsole\03GenericsConsole.csproj", "{E7EA03DC-E9D0-479A-AD7C-49C4B1754575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03GenericsConsole", "03GenericsConsole\03GenericsConsole.csproj", "{E7EA03DC-E9D0-479A-AD7C-49C4B1754575}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05ReflectConsole", "05ReflectConsole\05ReflectConsole.csproj", "{8A9A58A8-9E22-4BC3-9ED1-5C39171649B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05ReflectConsole", "05ReflectConsole\05ReflectConsole.csproj", "{8A9A58A8-9E22-4BC3-9ED1-5C39171649B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06AttributeConsole", "06AttributeConsole\06AttributeConsole.csproj", "{3EC4CE4F-4342-4E7B-8637-4CC39347DF71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8A9A58A8-9E22-4BC3-9ED1-5C39171649B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A9A58A8-9E22-4BC3-9ED1-5C39171649B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A9A58A8-9E22-4BC3-9ED1-5C39171649B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC4CE4F-4342-4E7B-8637-4CC39347DF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC4CE4F-4342-4E7B-8637-4CC39347DF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC4CE4F-4342-4E7B-8637-4CC39347DF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC4CE4F-4342-4E7B-8637-4CC39347DF71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
