@@ -33,12 +33,18 @@ namespace ReflectConsole
 
             //创建私有构造实例
             Type? privateType = assembly.GetType("Library.PrivateMyReflect");
-            object? objPrivate = Activator.CreateInstance(privateType, true);
+            if (privateType != null)
+            {
+                object? objPrivate = Activator.CreateInstance(privateType, true);
+            }
 
             //创建泛型实例
             Type? genericType = assembly.GetType("Library.MyReflect`1");//获取泛型类型
             genericType = genericType?.MakeGenericType(typeof(string));//设置类型参数
-            object? objGenericType = Activator.CreateInstance(genericType);
+            if (genericType != null)
+            {
+                object? objGenericType = Activator.CreateInstance(genericType);
+            }
             #endregion
 
             #region 获取信息
